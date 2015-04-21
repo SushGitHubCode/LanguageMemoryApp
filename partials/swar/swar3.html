@@ -1,0 +1,14 @@
+<form ng-submit="">
+    <div>स्वर जोड़े: {{varnamala3.unmatchedPairs}}</div>
+    <div>जोड़ना: {{varnamala3.firstPick.title}} </div>
+    <table ng-show="varnamala_tab" class="mainTable">
+        <tr ng-repeat="row in varnamala3.grid">
+            <td ng-repeat="tile in row" ng-click="varnamala3.flipTile(tile)">
+              <swar-Directive tile="tile" swar="swar3"></swar-Directive>   
+            </td>
+        </tr>
+    </table>
+    
+    <div class="message">{{varnamala3.message}}</div>
+      
+ </form>

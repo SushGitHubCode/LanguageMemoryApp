@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <title>स्मृति खेल </title>
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    
+    <!-- JS -->
+    <!-- load angular, nganimate, and ui-router -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+    <script src="controller/varnamalacontroller.js"></script>
+    <script src="factory/varnamalafactory.js"></script>
+    <script src="directive/swarDirective.js"></script>
+    <script src="directive/vyanjanDirective.js"></script>
+
+    <script src="assets/js/game.js"></script>
+    
+</head>
+<body ng-app="memoryAlphabetApp" ng-controller="VarnamalaCtrl">
+    <div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+
+  <div id="form-container">
+  
+      <div class="page-header text-center">
+          <h4>नमस्ते, आओ सीखें हिन्दी</h4>          
+          <!-- the links to our nested states using relative paths -->
+          <!-- add the active class if the state matches our ui-sref -->
+          <div id="status-buttons" class="text-center">
+              <a ui-sref-active="active" ui-sref="swarMain"><span> स्वर </span></a>
+              <a ui-sref-active="active" ui-sref="vyanjanMain"><span>व्यंजन</span></a>
+               
+          </div>
+      </div>
+      
+      <!-- use ng-submit to catch the form submission and use our Angular function -->
+      <form id="main-form" ng-submit="processForm()">          
+          <div id="form-views" ui-view></div>
+      </form>  
+  </div>
+ 
+</div>
+</div> 
+
+</body>
+</html>

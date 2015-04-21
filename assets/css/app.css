@@ -1,0 +1,197 @@
+/* BASIC STYLINGS
+============================================================================= */
+body                            { padding-top:10px; color:#334C4C; }
+pre                             { margin-bottom:10px; }
+
+/* form styling */
+#form-container                { background:#F0F5F5; margin-bottom:10px;
+    border-radius:5px; }
+#form-container .page-header   { background:#A3C2C2; margin:0; padding:10px; 
+    border-top-left-radius:5px; border-top-right-radius:5px; }
+
+/* numbered buttons */
+#status-buttons                 {  }
+#status-buttons a               { color:#FFF; display:inline-block; font-size:14px; margin-right:14px; text-align:center; text-transform:uppercase; }
+#status-buttons a.active        { color:#FFF; display:inline-block; font-size:14px; margin-right:14px; text-align:center; text-transform:uppercase;  }
+#status-buttons a:hover         { text-decoration:none; }
+#status-buttons span            { background:#080808; display:block; margin:0 auto 10px; padding-top:5px;height:30px;  width: 50px; 
+    border-radius:60%; }
+
+/* active buttons */
+#status-buttons a.active span   { background:#00BC8C; } 
+
+
+/* other link buttons */
+#other-status-buttons                 {  }
+#other-status-buttons a               { color:#FFF; display:inline-block; font-size:14px; font-weight: bold; padding: 2px 10px 2px 10px; text-align:center; background: #A3C2C2;}
+#other-status-buttons a.active        { color:#FFF; display:inline-block; font-size:14px; font-weight: bold; padding: 2px 10px 2px 10px; text-align:center; background: #00BCBC;}
+#other-status-buttons a:hover         { text-decoration:none; }
+#other-other-status-buttons span            { background:#080808; display:block; height:30px; margin:10 auto 5px; padding-top:5px; width:50px; 
+    border-radius:60%; }
+
+/* active buttons */
+/*#other-status-buttons a.active span   { background:#00BC8C; }*/
+
+/*a.active {background: #00BCBC !important;}*/
+#button {color:black;font-size: 12px;text-align:center;color:white;}
+
+div, h3
+{
+  text-align: center;
+}
+
+.mainTable{ margin-left: auto; margin-right: auto;}
+nav{
+  display:inline-block;
+  margin:60px auto 25px;
+  background-color:#5597b4;
+  box-shadow:0 1px 1px #ccc;
+  border-radius:2px;
+}
+
+nav a{
+  display:inline-block;
+  padding: 18px 40px;
+  color:#fff !important;
+  font-weight:bold;
+  font-size:14px;
+  text-decoration:none !important;
+  line-height:1;
+  text-transform: uppercase;
+  background-color:transparent;
+
+  -webkit-transition:background-color 0.25s;
+  -moz-transition:background-color 0.25s;
+  transition:background-color 0.25s;
+}
+
+nav a:first-child{
+  border-radius:2px 0 0 2px;
+}
+
+nav a:last-child{
+  border-radius:0 2px 2px 0;
+}
+
+nav.home .home,
+nav.swar .swar,
+nav.vyanjan .vyanjan,
+nav.contact .contact{
+  background-color:#CEE3F6;
+}
+
+
+.container1 {
+  width: 140px;
+  height: 160px;
+  position: relative; 
+   
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -ms-transition: -ms-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -ms-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.card img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+
+.card .back {
+  background: blue;
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -ms-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.message {
+  
+  text-align: center;
+}
+
+/* ANIMATION STYLINGS
+============================================================================= */
+#main-form            { position:relative; min-height:300px; overflow:hidden; padding:30px; }
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#form-views.ng-enter,
+#form-views.ng-leave      { position:absolute; left:30px; right:30px;
+    transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease; 
+}
+    
+/* enter animation */
+#form-views.ng-enter            { 
+    -webkit-animation:slideInRight 0.5s both ease;
+	-moz-animation:slideInRight 0.5s both ease;
+	animation:slideInRight 0.5s both ease; 
+}
+
+/* leave animation */
+#form-views.ng-leave            { 
+    -webkit-animation:slideOutLeft 0.5s both ease;
+	-moz-animation:slideOutLeft 0.5s both ease;
+	animation:slideOutLeft 0.5s both ease;   
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the left */
+@keyframes slideOutLeft {
+	to 		{ transform: translateX(-200%); }
+}
+@-moz-keyframes slideOutLeft {	
+	to 		{ -moz-transform: translateX(-200%); }
+}
+@-webkit-keyframes slideOutLeft {
+	to 		{ -webkit-transform: translateX(-200%); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+	from 	{ transform:translateX(200%); }
+	to 		{ transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+	from 	{ -moz-transform:translateX(200%); }
+	to 		{ -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+	from 	{ -webkit-transform:translateX(200%); }
+	to 		{ -webkit-transform: translateX(0); }
+}

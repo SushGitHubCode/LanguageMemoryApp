@@ -1,0 +1,13 @@
+<form ng-submit="">
+    <div>स्वर जोड़े: {{vyanjan1.unmatchedPairs}} </div>      
+    <div>जोड़ना: {{vyanjan1.firstPick.title}} </div> 
+    <table ng-show="varnamala_tab" class="mainTable">
+        <tr ng-repeat="row in vyanjan1.grid">
+            <td ng-repeat="tile in row" ng-click="vyanjan1.flipTile(tile)">
+                <vyanjan-Directive vyanjan="vyanjan" tile="tile" ></vyanjan-Directive>          
+            </td>
+        </tr>
+    </table>
+    <div class="message">{{vyanjan1.message}}</div>    
+     
+  </form>
